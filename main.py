@@ -1,33 +1,16 @@
-class Animal:
-    def __init__(self, name, age, color, weight):
-        self.name = name
-        self.age = age
-        self.color = color
-        self.weight = weight
+#Завдання 2
+#Створіть клас Circle з атрибутом radius та методом
+#area, який поверне площу кола з вказаним радіусом.
 
-    def breath(self):
-        print("дихає")
-    def move(self):
-        print("бігає")
+import math
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
 
-class Dog(Animal):
-    def voice(self):
-        print("Гавкає!")
-class Cat(Animal):
-    ...
+    def area(self):
+        return math.pi * self.radius ** 2
 
-# Створення екземпляра класу "Собака"
-my_bird = Animal("Вуді", 70, "синьо-білий", 120)
-print(my_bird.name)
-bobik = Dog("Бобініо", 3, "красівий", 60000)
-murchik = Cat("Мурчелло", 10, "срібний табі", 3700)
-print(murchik.color)#атрибут об'єкта
-bobik.weight = 42000
-bobik.height = 60
-print(bobik.height)
-print(bobik.weight)
-#методи
-bobik.breath()
-bobik.voice()
-murchik.move()
+# Створення екземпляра класу
+circle1 = Circle(5)
+print(round(circle1.area(), 2))
 
